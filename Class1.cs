@@ -16,7 +16,7 @@ public class HealthDetectorMod : BaseUnityPlugin
     {
         // my inner harmony
         
-        Harmony harmony = new Harmony("com.yourname.ultrakillhealthmod");
+        Harmony harmony = new Harmony("org.quadruplea.TotemOfUndying");
         harmony.PatchAll();
         
         
@@ -85,11 +85,11 @@ public class HealthDetectorMod : BaseUnityPlugin
             videoPlayer.isLooping = false;
             videoPlayer.targetTexture = rt;
             Debug.Log("Video Path: " + videoPlayer.url);
-            videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource; // Enable audio output
-            AudioSource audioSource = imageObject.AddComponent<AudioSource>(); // Add audio source
-            videoPlayer.SetTargetAudioSource(0, audioSource); // Link it to VideoPlayer
-            audioSource.playOnAwake = false; // Avoid double playing
-            audioSource.volume = 1f; // Adjust volume
+            videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource; // enable audio
+            AudioSource audioSource = imageObject.AddComponent<AudioSource>(); 
+            videoPlayer.SetTargetAudioSource(0, audioSource); // link audio to videoplayer
+            audioSource.playOnAwake = false; 
+            audioSource.volume = 1f; 
 
 
             
