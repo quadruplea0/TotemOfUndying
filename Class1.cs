@@ -121,7 +121,7 @@ public class HealthDetectorMod : BaseUnityPlugin
     
         static void Postfix(NewMovement __instance)
         {
-            if (__instance.hp < 75)
+            if (__instance.hp < 25)
             {
                 Play_Video();
                 
